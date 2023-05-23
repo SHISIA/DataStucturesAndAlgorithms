@@ -3,8 +3,8 @@ package org.datastructures.code;
 public class Main {
     public static void main(String[] args) {
     //     System.out.println("Hello world!");
-    //    System.out.println(computeRemainder(2, 4, 4));
-    runBillionTimes();
+       System.out.println(computeRemainder(2, 4, 4));
+    // runBillionTimes();
 
     }
 
@@ -24,14 +24,13 @@ public class Main {
         long startTime = System.currentTimeMillis();
         for (int i = 0; i < 1000_000_000; i++) {
             //takes / executes in approximately 20.817 nanonseconds per run 
-            computeRemainder(2,1000,7);
+            computeRemainder(2,61,7);
         }
         long endTime =System.currentTimeMillis();
         System.out.println(endTime - startTime);
-        System.out.println(startTime);
-        System.out.println(endTime);
 
         //Therefore, we can say our program execution in nanoseconds is 0.20817 X Power approximately
+        //In shortm, time taken is a CONSTANT X the Power
     }
 
 
