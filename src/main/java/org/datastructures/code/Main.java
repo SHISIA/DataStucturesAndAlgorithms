@@ -3,8 +3,8 @@ package org.datastructures.code;
 public class Main {
     public static void main(String[] args) {
     //     System.out.println("Hello world!");
-       System.out.println(computeRemainderCorrected(2,1000,7));
-    // runBillionTimes();
+    //    System.out.println(computeRemainderCorrected(2,1000,7));
+    runBillionTimes();
 
     }
 
@@ -28,13 +28,22 @@ public class Main {
     //running our program a billion times
     //executes in approx 20.817 seconds or 20817 millis (this was infered to when we raised to power 1000)
     public static void runBillionTimes(){
-        long startTime = System.currentTimeMillis();
-        for (int i = 0; i < 1000_000_000; i++) {
+        System.out.println(computeRemainderUsingEBS(13, 10_000_000, 7));
+        // long startTime = System.currentTimeMillis();
+        // for (int i = 0; i < 1000; i++) {
+        //     //takes / executes in approximately 20.817 nanonseconds per run 
+        //     computeRemainderCorrected(13, 10_000_000, 7);
+        // }
+        // long endTime =System.currentTimeMillis();
+        // System.out.println(endTime - startTime);
+
+        long startTime1 = System.currentTimeMillis();
+        for (int i = 0; i < 1000; i++) {
             //takes / executes in approximately 20.817 nanonseconds per run 
-            computeRemainder(2,61,7);
+            computeRemainderUsingEBS(13, 10_000_000, 7);
         }
-        long endTime =System.currentTimeMillis();
-        System.out.println(endTime - startTime);
+        long endTime1 =System.currentTimeMillis();
+        System.out.println(endTime1 - startTime1);
 
         //Therefore, we can say our program execution in nanoseconds is 0.20817 X Power approximately
         //In shortm, time taken is a CONSTANT X the Power
