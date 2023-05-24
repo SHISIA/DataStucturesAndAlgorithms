@@ -68,7 +68,7 @@ public class Main {
             numBits ++;
         }
 
-        //         Now we extract one bit at a time. Since we have already reversed the order of bit,
+        // Now we extract one bit at a time. Since we have already reversed the order of bit,
         // the first one we get is the most significant one. Just to get an intuition on the order,
         // the first bit we collect will eventually be squared the maximum number of times and
         // hence will act like the most significant bit:
