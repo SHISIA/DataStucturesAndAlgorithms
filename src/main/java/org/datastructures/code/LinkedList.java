@@ -123,6 +123,22 @@ public class LinkedList<E> implements Iterable<E>, Visualizable{
 
     //Reoving an element in the beginning means simply updating the reference to the first element
     //with that of the next element. NOTE: We do not update the reference in the element that has just been removed because the element along with the reference would be garbage-colected anyway
-     
+      public Node<E> removeFirst(){
+        if(length == 0){
+            throw new NoSuchElementException();
+        }
+        //assign reference to the next element
+        Node<E> origFirst = first;
+        first=first.next;
+        length --;
+        // If there are no more elements left, we must also update the last reference:
+        if(length == 0){
+            last = null;
+        }
+        return origFirst;
+      }
+
+    //   Removing an arbitrary element
+    
     
 }
