@@ -139,6 +139,32 @@ public class LinkedList<E> implements Iterable<E>, Visualizable{
       }
 
     //   Removing an arbitrary element
-    
+    protected Node<E> removeAtIndex(int index){
+        if(index < 0 || index >= length){
+            throw new NoSuchElementException();
+        }
+        //removing first element as a special case
+        if(index == 0){
+            Node<E> nodeRemoved = first;
+            removeFirst();
+            return nodeRemoved;
+        }
+        // First, find out the element just before the one that needs to be removed because this
+        // element would need its reference updated:
+        Node justBeforeIt = first;
+        while(--index > 0){
+            justBeforeIt = justBeforeIt.next;
+        }
+        // Update the last reference if the last element is the one that is being removed:
+        Node<E> nodeRemoved = justBeforeIt.next;
+        if(justBeforeIt.next == last){
+            last = justBeforeIt.next.next;
+        }
+        // Update the reference held by the previous element:
+        justBeforeIt.next = justBeforeIt.next.next;
+        length --;
+        return nodeRemoved;
+
+    }
     
 }
