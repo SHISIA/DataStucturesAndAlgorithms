@@ -25,13 +25,6 @@ public class LinkedList<E> implements Iterable<E>, Visualizable{
         lastModifiedNode = new Node[]{node};
         return node;
     }
-
-    @Override
-    public Iterator<E> iterator() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'iterator'");
-    }
-
     public Node<E> appendLast(E value){
         Node node=getNewNode();
         node.value = value;
@@ -164,7 +157,40 @@ public class LinkedList<E> implements Iterable<E>, Visualizable{
         justBeforeIt.next = justBeforeIt.next.next;
         length --;
         return nodeRemoved;
-
     }
+
+    //Now we implement the iterator method of
+// the Iterable interface to make our list an iterable:
+    @Override
+    public Iterator<E> iterator(){
+        return new ListIterator();
+    }
+
+    /**
+     * Since we are working in Java, we prefer to implement the Iterable interface. It lets
+us loop through the list in a simplified for loop syntax. For this purpose, we first
+have to create an iterator that will let us fetch the elements one by one:
+     */
+
+     //Every time it is invoked, we move to the next element
+// and return the current element's value.
+    protected class ListIterator implements Iterator<E> {
+        protected Node<E> nextNode = first;
     
+        @Override
+        public boolean hasNext() {
+            return nextNode !=null;
+        }
+    
+        @Override
+        public E next() {
+            if(!hasNext()){
+                throw new IllegalStateException();
+            }
+            Node<E> nodeToReturn = nextNode;
+            nextNode = nextNode.next;
+            return nodeToReturn.value;
+        }
+        
+    }  
 }
