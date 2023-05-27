@@ -20,6 +20,18 @@ public class LinkedList<E> implements Iterable<E>, Visualizable{
     protected Node<E> first;
     protected Node<E> last;
 
+    public int getLength(){
+        return length;
+    }
+
+    public Node<E> getFirst(){
+        return first;
+    }
+
+    public Node<E> getLast(){
+        return last;
+    }
+
     protected Node<E> getNewNode(){
         Node<E> node=new Node<>();
         lastModifiedNode = new Node[]{node};
