@@ -8,22 +8,35 @@ public class StackImplArray<E> implements Stack<E> {
         array = (E[]) new Object[size];
     }
 
+// We first check whether the stack is already full or the current top is equal to the
+// maximum index possible, like this:
     @Override
     public void push(E value) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'push'");
+        if(top == array.length-1){
+            throw new NoSpaceException("No more space in stack");
+        }
+        top++;
+        array[top] = value;
     }
 
     @Override
     public E pop() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'pop'");
+       if(top==-1){
+            return null;
+       }
+    //    Then we update the top and return the value at the current top as follows:
+       top --;
+       return array[top+1];
     }
 
     @Override
     public E peek() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
+       if(top==-1){
+            return null;
+       }
+    //    Otherwise, we return the top element, as follows:
+       return array[top];
     }
+    
     
 }
