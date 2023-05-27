@@ -193,5 +193,9 @@ have to create an iterator that will let us fetch the elements one by one:
             return nodeToReturn.value;
         }
         
-    }  
+    } 
+    /**
+     *Note that if you try to use the enhanced for loop with a circular
+    linked list, you will run into an infinite loop. 
+     **/ 
 }

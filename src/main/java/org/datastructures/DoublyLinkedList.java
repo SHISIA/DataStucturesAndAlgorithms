@@ -98,4 +98,12 @@ public class DoublyLinkedList<E> extends org.datastructures.code.LinkedList<E> {
         return origLast;
     }
 
+    //Rotation
+//     What we are doing here is just bringing the next element of the first element to the
+// first position. This is exactly what the name "rotation" would imply:
+    public void rotate(){
+        last =first;
+        first = first.next;
+    }
+
 }
