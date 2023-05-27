@@ -7,7 +7,7 @@ public class LinkedList<E> implements Iterable<E>, Visualizable{
 
     protected static class Node<E>{
         protected E value;
-        protected Node next;
+        public Node<E> next;
 
         @Override
         public String toString() {
@@ -15,16 +15,17 @@ public class LinkedList<E> implements Iterable<E>, Visualizable{
             return value.toString();
         }
 }
-    int length=0;
-    Node<E>[] lastModifiedNode;
-    Node<E> first;
-    Node<E> last;
+    protected int length=0;
+    protected Node<E>[] lastModifiedNode;
+    protected Node<E> first;
+    protected Node<E> last;
 
-    public Node<E> getNewNode(){
+    protected Node<E> getNewNode(){
         Node<E> node=new Node<>();
         lastModifiedNode = new Node[]{node};
         return node;
     }
+
     public Node<E> appendLast(E value){
         Node node=getNewNode();
         node.value = value;
