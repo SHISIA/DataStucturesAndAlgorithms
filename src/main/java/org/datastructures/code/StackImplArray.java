@@ -38,5 +38,4 @@ public class StackImplArray<E> implements Stack<E> {
        return array[top];
     }
     
-    
 }
