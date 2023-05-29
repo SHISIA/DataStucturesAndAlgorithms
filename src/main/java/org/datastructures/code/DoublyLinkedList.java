@@ -1,4 +1,4 @@
-package org.datastructures;
+package org.datastructures.code;
 
 import java.util.NoSuchElementException;
 
