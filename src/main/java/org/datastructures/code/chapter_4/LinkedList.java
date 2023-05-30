@@ -139,7 +139,18 @@ public class LinkedList <E> {
     }
 
     public static void main(String[] args) {
-        System.out.println(repeatString2("Shisia", 5));
+        LinkedList<Integer> linkedList=
+        LinkedList.<Integer>emptyList().add(5).add(5).add(6);
+
+        LinkedList<Integer> linkedList2=
+        LinkedList.<Integer>emptyList().add(6).add(8).add(9);
+        linkedList.append(linkedList2).forEach(System.out::println);
+        // System.out.println(repeatString2("Shisia", 5));
+    }
+
+    //Append on LinkedList
+    public LinkedList<E> append(LinkedList<E> rhs){
+        return this.foldRight((x,l)->l.add(x), rhs);
     }
 
 }
