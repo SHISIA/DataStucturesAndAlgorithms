@@ -49,6 +49,16 @@ public class LinkedList <E> {
             return LinkedList.emptyList();
         }
 
+        @Override
+        public <R> R foldLeft(R initialValue,TwoArgumentExpression<R,E,R> computer){
+            return initialValue;
+        }
+
+        @Override
+        public <R> R foldRight(TwoArgumentExpression<E,R,R> computer,R initialValue){
+            return initialValue;
+        }
+
 
     }
 
@@ -65,5 +75,35 @@ public class LinkedList <E> {
 
     public static <E> LinkedList<E> emptyList(){
         return new EmptyList<>();
+    }
+
+    //foldLeft
+    //foldLeft operation aggregates the head first and moves on to the tail. 
+    public <R> R foldLeft(R initialValue,TwoArgumentExpression<R,E,R> computer){
+        R newInitialValue = computer.compute(initialValue, head());
+        return tail().foldLeft(newInitialValue, computer);
+    }
+    
+    //foldRight:
+    //foldRight operation aggregates the tail first and moves on to the head.
+    public <R> R foldRight(TwoArgumentExpression<E,R,R> computer,R initialValue){
+        R computedValue = tail().foldRight(computer, initialValue);
+        return computer.compute(head,computedValue);
+    }
+
+    // Filter operation for a linked list
+    //we create a helper method that appends a range of numbers to the head of an
+    //existing list. This method can call itself recursively:
+    public static LinkedList<Integer> ofRange(int start, int end, LinkedList<Integer> tailList){
+        if(start >= end){
+            return tailList;
+        }else{
+            return ofRange(start+1, end, tailList).add(start);
+        }
+    }
+    
+    // Then we use the helper method to generate a list of a range of numbers:
+    public static LinkedList<Integer> ofRange(int start, int end){
+        return ofRange(start, end,LinkedList.emptyList());
     }
 }
