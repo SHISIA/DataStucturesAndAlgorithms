@@ -38,6 +38,29 @@ public class LinkedList <E> {
         public LinkedList<E> tail(){
             throw new NoValueException(" tail() invoked on an empty list");
         }
+
+        @Override
+        public void forEach(OneArgumentStatement<E> processor){
+
+        }
+
+        @Override
+        public <R> LinkedList<R> map(OneArgumentExpression<E,R> transformer){
+            return LinkedList.emptyList();
+        }
+
+
+    }
+
+    public void forEach(OneArgumentStatement<E> processor){
+        processor.doSomething(head());
+        tail().forEach(processor);
+
+    }
+
+    public <P> LinkedList<P> map(OneArgumentExpression<E,P> transformer){
+        return new LinkedList<>(transformer.compute(head()),
+        tail().map(transformer));
     }
 
     public static <E> LinkedList<E> emptyList(){
