@@ -59,6 +59,14 @@ public class LinkedList <E> {
             return initialValue;
         }
 
+//         The EmptyList of course needs to override this method
+// to just return itself because all we need is an empty list. Now, we can do the following:
+        @Override
+        public LinkedList<E> filter(OneArgumentExpression<E,Boolean> selector){
+            return this;
+        }
+    
+
 
     }
 
@@ -106,4 +114,32 @@ public class LinkedList <E> {
     public static LinkedList<Integer> ofRange(int start, int end){
         return ofRange(start, end,LinkedList.emptyList());
     }
+
+    // We now want to create a list of all even numbers, say. For that, we create a
+    // filter method in the class
+//     The filter() method checks whether the the condition is met. If yes, then it includes
+// the head and calls the filter() method on the tail. If not, then it just calls the
+// filter() method on the tail.
+    public LinkedList<E> filter(OneArgumentExpression<E,Boolean> selector){
+        if(selector.compute(head())){
+            return new LinkedList<E>(head(), tail()).filter(selector);
+        }else{
+            return tail().filter(selector);
+        }
+    }
+
+    //example
+//     Given an integer, n, and a string, we want
+// the resultant string to be a repetition of the original string n number of times.
+// For example, given an integer 5 and a string Hello, we want the output to be
+// HelloHello HelloHello Hello
+    public static String repeatString2(final String seed, int count){
+        return LinkedList.ofRange(1, count+1)
+            .foldLeft("",(a,b)->a+" "+seed);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(repeatString2("Shisia", 5));
+    }
+
 }
