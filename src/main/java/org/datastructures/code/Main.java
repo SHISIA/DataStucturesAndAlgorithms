@@ -4,7 +4,10 @@ public class Main {
     public static void main(String[] args) {
     //     System.out.println("Hello world!");
     //    System.out.println(computeRemainderCorrected(2,1000,7));
-    runBillionTimes();
+    // runBillionTimes();
+    Main main=new Main();
+    System.out.println(main.sum_upto_n(3));
+    System.out.println(main.choose(70, 7));
 
     }
 
@@ -52,6 +55,7 @@ public class Main {
     /**
      * Fixed power values output
      */
+    
     public static long computeRemainderCorrected(long base, long power, long divisor){
         long baseRaisedToPower=1;
         for (long i = 1; i <= power; i++) {
@@ -94,5 +98,22 @@ public class Main {
         return baseRaisedToPower;
     }
 
+    //recirsive algorithm for summing up to the max digit
+    public int sum_upto_n(int n){
+        return n == 0 ? 0 : n+sum_upto_n(n-1);
+    }
+
+    public long choose(long n, long r){
+        if(n<r){
+            return 0;
+        }else if(r==0){
+            return 1;
+        }else if(n==r){
+            return 1;
+        }else{
+            return choose(n-1, r) + choose(n-r, r-1);
+        }
+    
+    }
 
 }
