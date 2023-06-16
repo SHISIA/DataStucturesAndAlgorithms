@@ -3,9 +3,9 @@ package org.datastructures.code.chapter_4;
 public abstract class Option<E>{
     public abstract E get();
 
-    public abstract <R> Option<R> map(OneArgumentExpresssion<E,R> transformer);
+    public abstract <R> Option<R> map(OneArgumentExpression<E,R> transformer);
 
-    public abstract <R> Option<R> flatMap(OneArgumentExpresssion<E,Option<R>> transformer);
+    public abstract <R> Option<R> flatMap(OneArgumentExpression<E,Option<R>> transformer);
 
     public abstract void forEach(OneArgumentStatement<E> statement);
 
@@ -64,6 +64,8 @@ public static class Some<E> extends Option<E>{
     public void forEach(OneArgumentStatement<E> statement){
         statement.doSomething(value);
     }
+
+
 }
 
 }

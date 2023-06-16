@@ -1,7 +1,7 @@
 package org.datastructures.code.chapter_4;
 
 @FunctionalInterface
-public interface OneArgumentExpression<E, P> {
-    P compute(E head);
+public interface OneArgumentExpression<E, R> {
+    R compute(E head);
 
 }
