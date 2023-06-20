@@ -1,0 +1,6 @@
+In this chapter, we saw how to do an efficient search in an ordered array. This search is
+called a binary search. You also learned some methods of obtaining an ordered array
+out of an unordered one. This process is called sorting. We saw three basic algorithms
+of sorting. Although they are not particularly efficient, they are simple to understand
+the concept. You also learned how to convert a recursive algorithm to a non-recursive
+one that uses a loop.
