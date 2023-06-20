@@ -1,4 +1,4 @@
-package org.datastructures.code.Chpater_5_Efficient_Searching;
+package org.datastructures.code.Chapter_5_Efficient_Searching;
 
 // • Scan through the array, searching pairs of consecutive elements that are
 // ordered wrongly. Then find a j, such that array[j+1] < array[j].
