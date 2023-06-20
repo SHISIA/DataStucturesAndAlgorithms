@@ -1,5 +1,6 @@
 package org.datastructures.code.Chpater_5_Efficient_Searching;
 
+/**Binary Number Search* */
 public class Search {
 
      public static void main(String[] arg) {
