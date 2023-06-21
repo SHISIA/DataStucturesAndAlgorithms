@@ -4,3 +4,21 @@ and mergesort
 • quicksort
 • mergesort
 • Optimality of efficiency in sorting algorithms.
+
+***************************************************************************************
+Summary
+In this chapter, we explored two efficient sorting algorithms. The basic principle, in
+both cases, was to divide the array and to sort the parts separately. If we ensure that
+sorting the parts will cause the entire array to be sorted by readjusting the elements,
+it is quicksort. If we just divide the array into two equal parts first and–after sorting
+each part–merge the results to cause the entire array to be sorted, it is a mergesort.
+This way of dividing the input into smaller parts, solving the problem for the smaller
+parts and then combining the results to find the solution for the entire problem is a
+common pattern in solving computational problems, and it is called the divide and
+conquer pattern.
+We have also seen an asymptotic lower bound for any sorting algorithm that works
+using comparisons. Both quicksort and mergesort achieve this lower bound and
+hence, are asymptotically optimal. In the next chapter, we will move to a different
+kind of data structures called trees.
+
+**************************************************************************************
