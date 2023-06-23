@@ -3,11 +3,11 @@ package org.datastructures.code.Bro_Code;
 import java.util.Arrays;
 
 /**Finds target position within a sorted array> Half of the element is eliminated during each step
- * ADV: Efficient when working with a large data set***/
+ * ADV: Efficient when working with an extremely large data set***/
 public class BinarySearch {
     public static void main(String[] args) {
-        int array [] =new int[100];
-        int target = 42;
+        int array [] =new int[1000000000];
+        int target = 434232;
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
