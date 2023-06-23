@@ -1,4 +1,4 @@
-package org.datastructures.code;
+package org.datastructures.code.Unsorted_DS_Classes;
 
 public class QueueImplLinkedList<E> implements Queue<E> {
     protected LinkedList<E> list=getNewLinkedList();

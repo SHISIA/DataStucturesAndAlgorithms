@@ -1,4 +1,4 @@
-package org.datastructures.code;
+package org.datastructures.code.Unsorted_DS_Classes;
 
 public interface DoubleEndedQueue<E> extends Stack<E>{
     void inject(E value);

@@ -1,4 +1,4 @@
-package org.datastructures.code;
+package org.datastructures.code.Unsorted_DS_Classes;
 
 public class DoubleEndedQueueImplLinkedList<E> extends StackImplLinkedList<E> implements DoubleEndedQueue<E>{
     protected DoublyLinkedList<E> list = (DoublyLinkedList<E>) getNewLinkedList();

@@ -1,4 +1,4 @@
-package org.datastructures.code;
+package org.datastructures.code.Unsorted_DS_Classes;
 
 public class StackImplArray<E> implements Stack<E> {
     protected E[] array;

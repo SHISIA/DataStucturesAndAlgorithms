@@ -1,4 +1,4 @@
-package org.datastructures.code;
+package org.datastructures.code.Unsorted_DS_Classes;
 
 public class DoubleendedQueueImplArray<E> extends QueueImplArray<E> implements DoubleEndedQueue<E>{
 

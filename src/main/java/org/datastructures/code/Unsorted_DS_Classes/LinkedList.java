@@ -1,4 +1,4 @@
-package org.datastructures.code;
+package org.datastructures.code.Unsorted_DS_Classes;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

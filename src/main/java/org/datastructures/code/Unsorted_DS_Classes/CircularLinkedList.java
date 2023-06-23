@@ -1,4 +1,4 @@
-package org.datastructures.code;
+package org.datastructures.code.Unsorted_DS_Classes;
 
 /*
  * A circular linked list is an ordinary linked list, except that the last element holds the

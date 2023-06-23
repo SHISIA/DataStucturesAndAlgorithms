@@ -1,4 +1,4 @@
-package org.datastructures.code;
+package org.datastructures.code.Unsorted_DS_Classes;
 
 /**
  *Since we know that ADTs(Abstract Data Types) are to data structures what interfaces are to classes, we

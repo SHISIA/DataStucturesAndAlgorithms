@@ -1,8 +1,8 @@
-package org.datastructures.code;
+package org.datastructures.code.Unsorted_DS_Classes;
 
 import java.util.NoSuchElementException;
 
-public class DoublyLinkedList<E> extends org.datastructures.code.LinkedList<E> {
+public class DoublyLinkedList<E> extends LinkedList<E> {
     
     protected static class DoublyLinkedNode<E> extends Node<E>{
         protected DoublyLinkedNode<E> prev;
