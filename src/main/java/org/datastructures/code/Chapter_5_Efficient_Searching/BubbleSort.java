@@ -14,11 +14,21 @@ public class BubbleSort {
             sorted = true;
             for(int i=0;i <array.length - 1 ; i++){
                 if(array[i].compareTo(array[i+1]) > 0){
-                    SelectionSort.swap(array, i, i+1);
+                    swap(array, i, i+1);
                     sorted = false;
                 }
             }
         }
     }
-    
+
+    public static <E> void swap(E[] array, int i, int j){
+        if(i==j){
+            return;
+        }
+        E temp = array[i];
+        array[i]=array[j];
+        array[j]=temp;
+    }
+
+
 }
