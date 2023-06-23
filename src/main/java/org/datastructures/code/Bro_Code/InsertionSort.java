@@ -6,8 +6,7 @@ package org.datastructures.code.Bro_Code;
  * Runtime Complexity: O(n^2)
  * decent for small data sets
  *BAD: for large data sets
- * Runtime complexity of BEST CASE O(n) compared to SELECTION SORT's O(n^2)
- *
+ * Runtime complexity of BEST CASE O(n) compared to SELECTION SORT's O(n^2)*
  * LESS steps than BUBBLE SORT.**/
 public class InsertionSort {
     public static void main(String[] args) {
