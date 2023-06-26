@@ -18,7 +18,7 @@ Please make sure to update tests as appropriate.
 
 Open Source (In other words, free for use)
 
-## Template Source
- To create your own cool Readme.md file like this one, check out https://www.makeareadme.com/
-
 ![Alt text]( src/main/resources/cover.jpg "a title")
+
+## Template Source
+To create your own cool Readme.md file like this one, check out https://www.makeareadme.com/
