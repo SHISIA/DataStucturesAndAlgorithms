@@ -1,6 +1,6 @@
 # DataStructuresAndAlgorithms
 
-Foobar is a project for learning Java data structures, algorithms, and design patterns / best practices.
+<b><i>DataStructuresAndAlgorithms</i></b> is a project for learning Java data structures, algorithms, and design patterns/best practices.
 
 ## Usage
 
@@ -18,5 +18,7 @@ Please make sure to update tests as appropriate.
 
 Open Source (In other words, free for use)
 
+![Alt text]( src/main/resources/cover.jpg "a title")
+
 ## Template Source
- To create your own cool Readme.md file like this one, check out https://www.makeareadme.com/
+To create your own cool Readme.md file like this one, check out https://www.makeareadme.com/
