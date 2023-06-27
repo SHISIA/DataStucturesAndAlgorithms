@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Grader {
     static  final Logger logger= LogManager.getLogger(Grader.class);
-    public char returnLetterGrader(int numberGrader){
+    public static char returnLetterGrader(int numberGrader){
         if (numberGrader < 0){
             logger.log(Level.ERROR,"Logged");
             throw new IllegalArgumentException("Number grade cannot be zero");
@@ -30,5 +30,15 @@ public class Grader {
            }
         }
         return 'Y';
+    }
+
+    public static void main(String[] args) {
+        System.out.println(getGrade(100));
+    }
+
+    //pass grades  recursively
+    public static int getGrade(int grade){
+        if (grade < 0) return -1;
+        return getGrade(grade - 10) ;
     }
 }
