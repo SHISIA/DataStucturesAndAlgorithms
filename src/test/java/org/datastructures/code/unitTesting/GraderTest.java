@@ -32,7 +32,7 @@ class GraderTest {
     @Test
     void ninetyNineReturnA(){
         var grader =new Grader();
-        assertEquals('A',grader.returnLetterGrader(99));
+        assertEquals('Y',grader.returnLetterGrader(199));
     }
 
     @Test
@@ -42,5 +42,16 @@ class GraderTest {
                 ()-> grader.returnLetterGrader(-1));
     }
 
+    @Test
+    void moreThanHundred(){
+        var grader =new Grader();
+        assertEquals('A',grader.returnLetterGrader(99));
+    }
+
+    @Test
+    void moreThanHundredNotEqual(){
+        var grader =new Grader();
+        assertEquals('Y',grader.returnLetterGrader(101));
+    }
 
 }
