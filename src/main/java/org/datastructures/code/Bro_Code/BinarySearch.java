@@ -6,7 +6,7 @@ import java.util.Arrays;
  * ADV: Efficient when working with an extremely large data set***/
 public class BinarySearch {
     public static void main(String[] args) {
-        int array [] =new int[1000000000];
+        int[] array =new int[1000000000];
         int target = 434232;
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
