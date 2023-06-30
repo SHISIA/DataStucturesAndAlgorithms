@@ -22,8 +22,8 @@ public class Palindrome {
             return reverse ==prev ;
         }
 
-    public static void main(String[] args) {
-        System.out.println("here "+isPalindrome(11));
-    }
+//    public static void main(String[] args) {
+//        System.out.println("here "+isPalindrome(11));
+//    }
 }
 
