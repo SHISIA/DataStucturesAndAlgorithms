@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Roman {
-    public static int romanToInt(String s){
+    public  int romanToInt(String s){
 
         Map<Character,Integer> map = Map.of(
                 'I',1,
@@ -34,9 +34,7 @@ public class Roman {
         }
         return result;
     }
-
-    public static void main(String[] args) {
-
-        System.out.println("Number "+romanToInt("III"));
-    }
+//    public static void main(String[] args) {
+////        System.out.println("Number "+romanToInt("III"));
+//    }
 }
