@@ -14,22 +14,29 @@ public class Roman {
                 'C',100,
                 'D',500,
                 'M',1000);
-        char[] chars = s.toCharArray();
-        int result = 0;
-        for (int i=0;i<chars.length-1;i++){
-            result = chars[i];
-            System.out.println("tije "+chars[0]);
-            if (map.get(chars[i]) >= map.get(chars[i+1])){
-                result +=map.get(chars[i]);
-            }else {
-                result-=map.get(chars[i]);
-            }
 
+        char[] chars = s.toCharArray();
+        int result=0;
+        int previous=0;
+        if (chars.length == 0){
+            return -1;
+        }
+        if (chars.length == 1){
+            return map.get(chars[0]);
+        }
+        for (int i =chars.length-1; i>=0;i--) {
+            int number = map.get(chars[i]);
+            if (number < previous){
+                result-=number;
+            }else
+                result+=number;
+            previous = number;
         }
         return result;
     }
 
     public static void main(String[] args) {
-        System.out.println(romanToInt("X"));
+
+        System.out.println("Number "+romanToInt("III"));
     }
 }
