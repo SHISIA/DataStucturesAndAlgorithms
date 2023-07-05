@@ -16,8 +16,8 @@ import jdk.jfr.Unsigned;
 public class Recursion {
     public static void main(String[] args) {
 //        walk(5000000);//StackOverflow Error
-        System.out.println(factorial(4));
-        System.out.println(power(4,2));
+//        System.out.println(factorial(4));
+        System.out.println(power(2,-2));
     }
 
     private static int power(int base, int exponent) {
