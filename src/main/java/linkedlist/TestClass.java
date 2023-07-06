@@ -7,6 +7,8 @@ public class TestClass {
         linkedList.insertFirst(2);
         linkedList.insertFirst(3);
         linkedList.insertFirst(4);
+        linkedList.insertLast(0);
+        linkedList.insertFirst(5);
         linkedList.display();
     }
 }

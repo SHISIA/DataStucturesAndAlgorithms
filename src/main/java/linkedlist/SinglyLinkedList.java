@@ -35,6 +35,18 @@ public class SinglyLinkedList {
         }
     }
 
+    /** inserting last: check if the linkedlist is empty, if so, insert it as the first element and, else
+     * point the current tail's next value to our new node and then make our new node the tail **/
+    public void insertLast(int val){
+        Node node=new Node(val);
+        if (head==null){
+            insertFirst(val);
+            return;
+        }
+        tail.next=node;
+        tail=node;
+    }
+
 
 
    private class Node{
