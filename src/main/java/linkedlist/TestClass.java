@@ -9,6 +9,8 @@ public class TestClass {
         linkedList.insertFirst(4);
         linkedList.insertLast(0);
         linkedList.insertFirst(5);
+        linkedList.insert(50,2);
+
         linkedList.display();
     }
 }

@@ -38,14 +38,46 @@ public class SinglyLinkedList {
     /** inserting last: check if the linkedlist is empty, if so, insert it as the first element and, else
      * point the current tail's next value to our new node and then make our new node the tail **/
     public void insertLast(int val){
-        Node node=new Node(val);
         if (head==null){
             insertFirst(val);
             return;
         }
+        Node node=new Node(val);
         tail.next=node;
         tail=node;
+        size++;
     }
+
+    /** inserts the given value at the given index :: we first traverse to the element before the mentioned index and then
+     *use it as our pointer reference because it points to the index we want to change **/
+    public void insert(int value,int index){
+        if (head==null){
+            insertFirst(value);
+            return;
+        }
+        if (index==size){
+            insertLast(value);
+        }
+        Node temp=head;
+        for (int i=1;i<index;i++){
+           temp=temp.next;
+        }
+        Node node=new Node(value,temp.next);
+        temp.next=node;
+        size++;
+    }
+
+//    public Node find(int val){
+//        Node temp=head;
+//        Node node=new Node(val);
+//        while (temp!=null){
+//            if (temp.next==node){
+//                return temp;
+//            }
+//            temp=temp.next;
+//        }
+//        return
+//    }
 
 
 
