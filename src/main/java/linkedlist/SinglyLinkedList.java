@@ -67,6 +67,27 @@ public class SinglyLinkedList {
         size++;
     }
 
+    /**deleting the first value:: we check if the list is empty and return a -1 and stop, if the list has one
+     * element we remove it by updating the tail and head to null, then we return its value, else we remove the head
+     * by setting tis pointer to the next element **/
+    public int deleteFirst(){
+        int value;
+        if (size==0){
+            return -1;
+        }
+        if (size==1){
+            value=head.value;
+            tail=null;
+            head=null;
+            return value;
+        }
+        assert head != null;
+        value=head.value;
+        head=head.next;
+        return  value;
+
+    }
+
 //    public Node find(int val){
 //        Node temp=head;
 //        Node node=new Node(val);

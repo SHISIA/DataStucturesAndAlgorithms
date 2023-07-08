@@ -10,7 +10,7 @@ public class TestClass {
         linkedList.insertLast(0);
         linkedList.insertFirst(5);
         linkedList.insert(50,2);
-
+        System.out.println(linkedList.deleteFirst());
         linkedList.display();
     }
 }
