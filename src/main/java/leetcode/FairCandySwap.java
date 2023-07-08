@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.Arrays;
+
 /**
  * Link -> https://leetcode.com/problems/fair-candy-swap/
  * Alice and Bob have a different total number of candies.
@@ -14,7 +16,7 @@ package leetcode;
  It is guaranteed that at least one answer exists.*/
 public class FairCandySwap {
 
-    public int[] fairCandySwap(int[] aliceSizes, int[] bobSizes){
+    public static int[] fairCandySwap(int[] aliceSizes, int[] bobSizes){
         int countBob=0, countAlice=0;
         for(int i: aliceSizes){
             countAlice+=i;
@@ -35,6 +37,6 @@ public class FairCandySwap {
     }
 
     public static void main(String[] args) {
-
+        System.out.println(Arrays.toString(fairCandySwap(new int[]{2},new int[]{1,3})));
     }
 }
