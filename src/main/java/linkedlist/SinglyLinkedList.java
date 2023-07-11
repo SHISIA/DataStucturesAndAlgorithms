@@ -1,6 +1,7 @@
 package linkedlist;
 
-/**Singly Ln=inkedList Data Structure**/
+/**Singly Ln=inkedList Data Structure
+ * Time complexity : insertion O(1), deletion O(n),search O(n)**/
 public class SinglyLinkedList {
     private int size;
     private Node tail;
@@ -84,23 +85,30 @@ public class SinglyLinkedList {
         assert head != null;
         value=head.value;
         head=head.next;
+        size--;
         return  value;
-
     }
 
-//    public Node find(int val){
-//        Node temp=head;
-//        Node node=new Node(val);
-//        while (temp!=null){
-//            if (temp.next==node){
-//                return temp;
-//            }
-//            temp=temp.next;
-//        }
-//        return
-//    }
+    public Node find(int index){
+        Node temp=head;
+        Node node;
+        for (int i = 1; i < index-1; i++) {
+            temp=temp.next;
+        }
+        node=temp;
+        return node;
+    }
 
-
+    public int deleteLast(){
+        if (size<=1){
+            return deleteFirst();
+        }
+        int value=tail.value;
+        tail= find(size-2);
+        tail.next=null;
+        size--;
+        return value;
+    }
 
    private class Node{
        private int value;
