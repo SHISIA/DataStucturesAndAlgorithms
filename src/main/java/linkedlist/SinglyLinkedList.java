@@ -1,6 +1,6 @@
 package linkedlist;
 
-/**Singly Ln=inkedList Data Structure
+/**Singly LinkedList Data Structure
  * Time complexity : insertion O(1), deletion O(n),search O(n)**/
 public class SinglyLinkedList {
     private int size;
