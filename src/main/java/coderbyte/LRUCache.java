@@ -50,7 +50,7 @@ public class LRUCache {
             stringBuilder.setCharAt(i,'X');
         }
 
-        return strArr[0];
+        return stringBuilder.toString();
     }
 
     public static void main(String[] args) {
