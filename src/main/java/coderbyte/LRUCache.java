@@ -13,8 +13,8 @@ import java.util.Set;
 public class LRUCache {
     public static String arrayChallenge(String[] strArr){
         ArrayList<String> stringSet=new ArrayList<>();
-        String[] arr=new String[5];
-        String[] arr_=new String[5];
+        ArrayList<String> arr=new ArrayList<>();
+        ArrayList<String> arr_=new ArrayList<>();
         int counter = 0;
         for (String s : strArr) {
             if (stringSet.contains(s+"-")) {
@@ -25,18 +25,16 @@ public class LRUCache {
 
         //reverse the string getting the last five elements
         for (int i = stringSet.size()-1; i >=0; i--) {
-
+            //terminate loop after getting the last five elements
             if (counter==5){
                 break;
             }
-            arr[counter]=stringSet.get(i);
+            arr.add(stringSet.get(i));
             counter++;
         }
-        //reuse counter to count our values
-        counter=0;
-        //reverse to get the normal orde
-        for (int i = arr.length-1; i >=0; i--) {
-            arr_[counter++]=arr[i];
+        //reverse to get the normal initial order
+        for (int i = arr.size()-1; i >=0; i--) {
+            arr_.add(arr.get(i));
         }
         StringBuilder stringBuilder=new StringBuilder();
         //convert our array to a string
@@ -44,6 +42,8 @@ public class LRUCache {
             stringBuilder.append(str);
         }
          stringBuilder.deleteCharAt(stringBuilder.length()-1);
+        System.out.println("dfd "+stringBuilder);
+
         stringBuilder.append("t9edj70y31b");
         //replace every third element
         for (int i=2;i<stringBuilder.length();i+=3){
@@ -54,6 +54,6 @@ public class LRUCache {
     }
 
     public static void main(String[] args) {
-        System.out.printf(arrayChallenge(new String[]{"A", "B", "C", "D", "A", "E", "D", "Z"}));
+        System.out.printf(arrayChallenge(new String[]{"A", "B", "A", "C", "A", "B"}));
     }
 }
