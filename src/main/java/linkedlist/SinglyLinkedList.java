@@ -3,13 +3,29 @@ package linkedlist;
 /**Singly LinkedList Data Structure
  * Time complexity : insertion O(1), deletion O(n),search O(n)**/
 public class SinglyLinkedList {
-    private int size;
-    private Node tail;
-    private Node head;
+    public int size;
+    public Node tail;
+    public Node head;
 
     //initialize the LinkedList with size zero (empty)
     public SinglyLinkedList(){
         this.size=0;
+    }
+
+    /**
+     * Reverse the linkedlist
+     **/
+    public void reversed(){
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+        while(current!=null){
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head=prev;
     }
 
     /**inserting the value at the first position requires updating the tail (if it is the first element in the linkedlist)
@@ -110,9 +126,9 @@ public class SinglyLinkedList {
         return value;
     }
 
-   private class Node{
-       private int value;
-        private Node next;
+   public static class Node{
+       public int value;
+        public Node next;
 
         public Node(int value){
             this.value=value;
