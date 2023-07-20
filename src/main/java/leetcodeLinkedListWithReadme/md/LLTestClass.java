@@ -9,8 +9,8 @@ public class LLTestClass {
         linkedList.insertFirst(4);
         linkedList.insertLast(30);
         linkedList.insertFirst(4);
-        linkedList.display();
-        linkedList.deleteDuplicates();
+//        linkedList.display();
+//        linkedList.deleteDuplicates();
         System.out.println();
         linkedList.display();
     }
