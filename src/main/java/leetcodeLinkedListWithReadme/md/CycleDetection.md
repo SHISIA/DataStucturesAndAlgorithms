@@ -1,7 +1,7 @@
 # <b style="color:orange;font-size:40px;">LeetCode challenge</b>
 ## 141. Linked List Cycle (LinkedList (<b style="color:green">Leetcode Easy</b>) Challenge)
 
-[![N|Solid](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*bDaPkfSGUEqaJGYLVyDa4w.png)](https://nodesource.com/products/nsolid)
+[![N|Solid](https://i.stack.imgur.com/TQoyH.png)](https://nodesource.com/products/nsolid)
 
 [Find the problem here]https://leetcode.com/problems/linked-list-cycle/
 
@@ -16,9 +16,10 @@ There is a cycle in a linked list if there is some node in the list that can be 
 Return true if there is a cycle in the linked list. Otherwise, return false.
 
 ## Constraints
-> - The number of nodes in the list is in the range [0, 300].
-> - -100 <= Node.val <= 100
-> - The list is guaranteed to be sorted in ascending order.
+> - The number of the nodes in the list is in the range [0, 10<sup>4</sup>].
+> - 10<sup>5</sup> <= Node.val <= 10<sup>5</sup>
+> - pos is -1 or a valid index in the linked-list.
+
 
 ## Example One
 <img src="https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist.png"/>

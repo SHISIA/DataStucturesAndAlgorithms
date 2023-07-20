@@ -1,7 +1,8 @@
 # <b style="color:orange;font-size:40px;">LeetCode challenge</b>
 ## Remove Duplicates (LinkedList (<b style="color:green">Leetcode Easy</b>) Challenge)
 
-[![N|Solid](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*bDaPkfSGUEqaJGYLVyDa4w.png)](https://nodesource.com/products/nsolid)
+[//]: # ([![N|Solid]&#40;https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/excel-1-1.jpg&#41;]&#40;https://nodesource.com/products/nsolid&#41;)
+<img src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/excel-1-1.jpg" style="width:100vw; height:60vh;" alt="Remove Duplicate Image"/>
 
 [Find the problem here]https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 
