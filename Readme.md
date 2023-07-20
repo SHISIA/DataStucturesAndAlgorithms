@@ -1,6 +1,6 @@
-# DataStructuresAndAlgorithms
+# <b style="color:orange;">DataStructuresAndAlgorithms</b>
 
-<b><i>DataStructuresAndAlgorithms</i></b> is a project for learning Java data structures, algorithms, and design patterns/best practices.
+<b style="color:white;"><i>DataStructuresAndAlgorithms</i></b> is a project for learning Java data structures, algorithms, and design patterns/best practices.
 
 ## Usage
 
