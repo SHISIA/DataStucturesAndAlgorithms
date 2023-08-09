@@ -29,6 +29,7 @@ public class Queue {
         while (!queue.isEmpty()){
             queue.remove();
         }
+
         //verify the queue is empty
         System.out.println("Is our Queue empty ? "+ (queue.isEmpty() ? "YES" : "NO"));
     }
