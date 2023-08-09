@@ -26,11 +26,11 @@ public class CustomStack<T> {
         return pointer == data.length - 1;
     }
 
-    private boolean isEmpty(){
+    public boolean isEmpty(){
         return pointer == -1;
     }
 
-    private boolean push(T element) throws StackException {
+    public boolean push(T element) throws StackException {
         return add(element);
     }
 

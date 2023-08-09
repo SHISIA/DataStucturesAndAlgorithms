@@ -7,7 +7,10 @@ public class Tester {
             customStack.add(2);
             customStack.add(5);
             customStack.add(6);
-            System.out.println(customStack.search(5));
+            customStack.push(9);
+            System.out.println(customStack.pop());
+            System.out.println(customStack.peek());
+
         }catch (StackException e) {
             throw new RuntimeException(e);
         }
