@@ -5,13 +5,14 @@ import java.util.Arrays;
 
 public class CustomStack<T> {
     private static final int DEFAULT_SIZE=10;
+
     private T[] data;
     private int pointer=-1;
-    public CustomStack(Class<T> tclass){
-        this(tclass,DEFAULT_SIZE);
+    public CustomStack(){
+        this(DEFAULT_SIZE);
     }
-    public CustomStack(Class<T> tClass,int size){
-        this.data=(T[]) Array.newInstance(tClass,size);
+    public CustomStack(int size){
+        this.data=(T[]) new Object[size];
     }
 
     public boolean add(T element) throws StackException {
