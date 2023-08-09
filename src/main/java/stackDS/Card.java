@@ -12,7 +12,7 @@ public class Card {
         return id;
     }
 
-    Card(int id, String name){
+    public Card(int id, String name){
         this.id=id;
         this.name=name;
     }

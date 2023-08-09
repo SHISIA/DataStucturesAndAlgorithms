@@ -1,4 +1,6 @@
-package stackDS;
+package QueueDS;
+
+import stackDS.Card;
 
 import java.util.LinkedList;
 
