@@ -39,8 +39,8 @@ public class CustomStack<T> {
         return data[pointer];
     }
 
-    public T pop(){
-        if (isEmpty()) return null;
+    public T pop() throws StackException {
+        if (isEmpty()) throw new StackException("Cannot add element ");
         return data[pointer--];
     }
 

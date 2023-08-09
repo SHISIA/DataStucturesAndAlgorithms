@@ -10,9 +10,12 @@ public class Tester {
             customStack.push(9);
             System.out.println(customStack.pop());
             System.out.println(customStack.peek());
+            customStack.pop();
+            customStack.pop();
+            customStack.pop();
 
         }catch (StackException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }
