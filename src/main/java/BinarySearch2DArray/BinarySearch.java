@@ -10,6 +10,7 @@ public class BinarySearch {
                 {28, 29, 37, 49},
                 {33, 34, 38, 50}
         };
+
         int[] notFound = {-1, -1};
         int target = 33;
         if (Arrays.equals(search(matrix, target), notFound)) {
