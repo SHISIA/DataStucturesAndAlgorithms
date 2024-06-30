@@ -1,4 +1,4 @@
-package List_Interface_In_Java;
+package ThinkDataStructures_Oreilly_Book.List_Interface_In_Java;
 
 import java.util.ArrayList;
 import java.util.List;

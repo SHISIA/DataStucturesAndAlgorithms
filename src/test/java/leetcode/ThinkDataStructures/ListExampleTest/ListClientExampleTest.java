@@ -1,11 +1,9 @@
-package leetcode.ListExampleTest;
+package leetcode.ThinkDataStructures.ListExampleTest;
 
-import List_Interface_In_Java.ListClientExample;
-import org.datastructures.code.chapter_4.Option;
+import ThinkDataStructures_Oreilly_Book.List_Interface_In_Java.ListClientExample;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
